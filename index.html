@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>この水は、いつの雨だろう。 — When Did This Water Fall as Rain?</title>
+<meta name="description" content="山梨の湧き水を、グラスに一杯。その水が雨や雪として山に降った年へ、しずくをひとつずつ帰していくウェブ作品。">
+<meta name="theme-color" content="#05070b">
+<meta property="og:title" content="この水は、いつの雨だろう。 — When Did This Water Fall as Rain?">
+<meta property="og:description" content="山梨の湧き水を、グラスに一杯。その水が降った年へ、しずくを帰していくウェブ作品。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://hidetohiranuma.github.io/mizu-no-jikan/img/og.jpg">
+<meta property="og:url" content="https://hidetohiranuma.github.io/mizu-no-jikan/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/icon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/noto-serif-jp-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<canvas id="cv" aria-hidden="true"></canvas>
+
+<section id="start" class="start" aria-labelledby="t-title">
+  <h1 id="t-title" data-t="title">この水は、いつの雨だろう。</h1>
+  <p class="sub" lang="en">When Did This Water Fall as Rain?</p>
+  <p class="lead" data-t="lead"></p>
+  <div class="go">
+    <button type="button" id="start-ja" class="btn main">はじめる</button>
+    <button type="button" id="start-en" class="btn" lang="en">Start in English</button>
+  </div>
+  <p class="note" data-t="note"></p>
+  <button type="button" class="link about-open" data-t="about">この作品について</button>
+</section>
+
+<p id="line" class="line" role="status" aria-live="polite"></p>
+
+<div id="pick" class="pick" hidden>
+  <div class="pick-row">
+    <button type="button" id="pick-prev" class="btn sq" aria-label="前の年">◀</button>
+    <span id="pick-year" class="pick-year">—</span>
+    <button type="button" id="pick-next-year" class="btn sq" aria-label="次の年">▶</button>
+    <button type="button" id="pick-next" class="btn main">つぎへ</button>
+  </div>
+  <p id="pick-hint" class="pick-hint"></p>
+</div>
+
+<button type="button" id="rain" class="btn main rain" hidden>雨を降らせる</button>
+
+<section id="end" class="end" hidden>
+  <div class="go">
+    <button type="button" id="save" class="btn main" data-t="save">予報を画像でのこす</button>
+    <button type="button" id="again" class="btn" data-t="again">もういちど</button>
+    <button type="button" class="btn about-open" data-t="about">この作品について</button>
+  </div>
+</section>
+
+<div id="about" class="about" role="dialog" aria-modal="true" aria-labelledby="about-body" hidden>
+  <div class="about-in">
+    <div id="about-body"></div>
+    <button type="button" id="about-close" class="btn" data-t="close">とじる</button>
+  </div>
+</div>
+<noscript><p style="position:fixed;inset:auto 16px 16px;color:#e6ebf3">この作品は JavaScript を使います。 This work needs JavaScript.</p></noscript>
+</body>
+</html>
